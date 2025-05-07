@@ -2,7 +2,8 @@
 # Name: Dimitrios Paschalidis
 
 # Q1: Number of Observations
-data <- read.csv("C:/Users/dim12/OneDrive/Documents/School/Quantitative Research LLT/New folder/ELP_full_length_frequency.csv")
+cat("Please select the ELP CSV file\n")
+data <- read.csv(file.choose())
 nrow(data)  # Output: Number of observations
 
 # Q2: Number and Nature of Variables
@@ -58,3 +59,4 @@ t.test(data$RT)
 
 model <- lm(RT ~ Log10Freq, data = data)
 summary(model)  # Shows intercept, slope, p-values, R-squared
+
